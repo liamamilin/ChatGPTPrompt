@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 ChatGPT 使用技巧 | ChatGPT Promopt</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 ChatGPT 使用技巧 | ChatGPT Promopt" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 ChatGPT 使用技巧 | ChatGPT Promopt" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="米霖" />
+
+
+<meta name="date" content="2023-01-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="chatgpt-功能.html"/>
+<link rel="next" href="创建有效的prompt.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">ChatGpt Prompt</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> ChatGpt</a></li>
+<li class="chapter" data-level="2" data-path="chatgpt-功能.html"><a href="chatgpt-功能.html"><i class="fa fa-check"></i><b>2</b> ChatGPT 功能</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="chatgpt-功能.html"><a href="chatgpt-功能.html#nlp-自然语言处理"><i class="fa fa-check"></i><b>2.1</b> NLP (自然语言处理)</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="chatgpt-功能.html"><a href="chatgpt-功能.html#文本生成"><i class="fa fa-check"></i><b>2.1.1</b> 文本生成</a></li>
+<li class="chapter" data-level="2.1.2" data-path="chatgpt-功能.html"><a href="chatgpt-功能.html#summarization-总结"><i class="fa fa-check"></i><b>2.1.2</b> Summarization 总结</a></li>
+<li class="chapter" data-level="2.1.3" data-path="chatgpt-功能.html"><a href="chatgpt-功能.html#开放领域问题回答open-domain-question-answering"><i class="fa fa-check"></i><b>2.1.3</b> 开放领域问题回答(Open Domain Question Answering)</a></li>
+<li class="chapter" data-level="2.1.4" data-path="chatgpt-功能.html"><a href="chatgpt-功能.html#解释转述paraphrasing"><i class="fa fa-check"></i><b>2.1.4</b> 解释/转述(Paraphrasing)</a></li>
+<li class="chapter" data-level="2.1.5" data-path="chatgpt-功能.html"><a href="chatgpt-功能.html#情感分析sentiment-analysis"><i class="fa fa-check"></i><b>2.1.5</b> 情感分析(Sentiment Analysis )</a></li>
+<li class="chapter" data-level="2.1.6" data-path="chatgpt-功能.html"><a href="chatgpt-功能.html#将表格转换成为文本"><i class="fa fa-check"></i><b>2.1.6</b> 将表格转换成为文本</a></li>
+<li class="chapter" data-level="2.1.7" data-path="chatgpt-功能.html"><a href="chatgpt-功能.html#将文本转化成为表格"><i class="fa fa-check"></i><b>2.1.7</b> 将文本转化成为表格</a></li>
+<li class="chapter" data-level="2.1.8" data-path="chatgpt-功能.html"><a href="chatgpt-功能.html#其他应用还包括"><i class="fa fa-check"></i><b>2.1.8</b> 其他应用还包括</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="chatgpt-功能.html"><a href="chatgpt-功能.html#代码-code"><i class="fa fa-check"></i><b>2.2</b> 代码 Code</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="chatgpt-功能.html"><a href="chatgpt-功能.html#an-prompt-for-docstrings-generation"><i class="fa fa-check"></i><b>2.2.1</b> An prompt for Docstrings Generation</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="chatgpt-功能.html"><a href="chatgpt-功能.html#结构化输出structured-output-styles"><i class="fa fa-check"></i><b>2.3</b> 结构化输出(Structured Output Styles)</a></li>
+<li class="chapter" data-level="2.4" data-path="chatgpt-功能.html"><a href="chatgpt-功能.html#非结构化输出unstructured-output-styles"><i class="fa fa-check"></i><b>2.4</b> 非结构化输出(Unstructured Output Styles)</a></li>
+<li class="chapter" data-level="2.5" data-path="chatgpt-功能.html"><a href="chatgpt-功能.html#生成媒体内容media-types"><i class="fa fa-check"></i><b>2.5</b> 生成媒体内容(Media Types)</a></li>
+<li class="chapter" data-level="2.6" data-path="chatgpt-功能.html"><a href="chatgpt-功能.html#meta-chatgpt"><i class="fa fa-check"></i><b>2.6</b> Meta ChatGPT</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="chatgpt-使用技巧.html"><a href="chatgpt-使用技巧.html"><i class="fa fa-check"></i><b>3</b> ChatGPT 使用技巧</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="chatgpt-使用技巧.html"><a href="chatgpt-使用技巧.html#迭代"><i class="fa fa-check"></i><b>3.1</b> 迭代</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="chatgpt-使用技巧.html"><a href="chatgpt-使用技巧.html#反馈并重试"><i class="fa fa-check"></i><b>3.1.1</b> 反馈并重试:</a></li>
+<li class="chapter" data-level="3.1.2" data-path="chatgpt-使用技巧.html"><a href="chatgpt-使用技巧.html#ask-for-variations要求变体不同版本"><i class="fa fa-check"></i><b>3.1.2</b> Ask for Variations要求变体/不同版本:</a></li>
+<li class="chapter" data-level="3.1.3" data-path="chatgpt-使用技巧.html"><a href="chatgpt-使用技巧.html#ask-for-clarification要求解释"><i class="fa fa-check"></i><b>3.1.3</b> Ask for Clarification/要求解释:</a></li>
+<li class="chapter" data-level="3.1.4" data-path="chatgpt-使用技巧.html"><a href="chatgpt-使用技巧.html#maintain-stability-in-the-face-of-change部分修改"><i class="fa fa-check"></i><b>3.1.4</b> Maintain Stability in the Face of Change/部分修改:</a></li>
+<li class="chapter" data-level="3.1.5" data-path="chatgpt-使用技巧.html"><a href="chatgpt-使用技巧.html#添加解释"><i class="fa fa-check"></i><b>3.1.5</b> 添加解释:</a></li>
+<li class="chapter" data-level="3.1.6" data-path="chatgpt-使用技巧.html"><a href="chatgpt-使用技巧.html#longer-shorter-faster-stronger"><i class="fa fa-check"></i><b>3.1.6</b> Longer, Shorter, Faster, Stronger:</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="chatgpt-使用技巧.html"><a href="chatgpt-使用技巧.html#角色扮演roleplay"><i class="fa fa-check"></i><b>3.2</b> 角色扮演(ROLEPLAY)</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="chatgpt-使用技巧.html"><a href="chatgpt-使用技巧.html#角色"><i class="fa fa-check"></i><b>3.2.1</b> 角色</a></li>
+<li class="chapter" data-level="3.2.2" data-path="chatgpt-使用技巧.html"><a href="chatgpt-使用技巧.html#制定明确的指示"><i class="fa fa-check"></i><b>3.2.2</b> 制定明确的指示</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="chatgpt-使用技巧.html"><a href="chatgpt-使用技巧.html#训练chatgpt"><i class="fa fa-check"></i><b>3.3</b> 训练ChatGPT</a></li>
+<li class="chapter" data-level="3.4" data-path="chatgpt-使用技巧.html"><a href="chatgpt-使用技巧.html#创建长内容"><i class="fa fa-check"></i><b>3.4</b> 创建长内容</a></li>
+<li class="chapter" data-level="3.5" data-path="chatgpt-使用技巧.html"><a href="chatgpt-使用技巧.html#案例"><i class="fa fa-check"></i><b>3.5</b> 案例</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="创建有效的prompt.html"><a href="创建有效的prompt.html"><i class="fa fa-check"></i><b>4</b> 创建有效的Prompt</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="创建有效的prompt.html"><a href="创建有效的prompt.html#创建prompt的关键原则"><i class="fa fa-check"></i><b>4.1</b> 创建Prompt的关键原则</a></li>
+<li class="chapter" data-level="4.2" data-path="创建有效的prompt.html"><a href="创建有效的prompt.html#常用prompt"><i class="fa fa-check"></i><b>4.2</b> 常用Prompt</a></li>
+<li class="chapter" data-level="4.3" data-path="创建有效的prompt.html"><a href="创建有效的prompt.html#常用prompt-模版"><i class="fa fa-check"></i><b>4.3</b> 常用Prompt 模版</a></li>
+<li class="chapter" data-level="4.4" data-path="创建有效的prompt.html"><a href="创建有效的prompt.html#以下是一些常用的小工具-prompt"><i class="fa fa-check"></i><b>4.4</b> 以下是一些常用的小工具 Prompt：</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="chatgpt-例子.html"><a href="chatgpt-例子.html"><i class="fa fa-check"></i><b>5</b> Chatgpt 例子</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="chatgpt-例子.html"><a href="chatgpt-例子.html#crafting-a-title-with-chatgpt"><i class="fa fa-check"></i><b>5.1</b> Crafting A Title With ChatGPT</a></li>
+<li class="chapter" data-level="5.2" data-path="chatgpt-例子.html"><a href="chatgpt-例子.html#writing-a-book-with-chatgpt"><i class="fa fa-check"></i><b>5.2</b> Writing a Book With ChatGPT</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="chatgpt-例子.html"><a href="chatgpt-例子.html#总结"><i class="fa fa-check"></i><b>5.2.1</b> 总结</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="chatgpt-例子.html"><a href="chatgpt-例子.html#chatgpt-for-low-content"><i class="fa fa-check"></i><b>5.3</b> ChatGPT For Low-Content</a></li>
+<li class="chapter" data-level="5.4" data-path="chatgpt-例子.html"><a href="chatgpt-例子.html#chatgpt-for-proofreading校对"><i class="fa fa-check"></i><b>5.4</b> ChatGPT For Proofreading/校对</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">ChatGPT Promopt</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="chatgpt-使用技巧" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> ChatGPT 使用技巧<a href="chatgpt-使用技巧.html#chatgpt-使用技巧" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="迭代" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> 迭代<a href="chatgpt-使用技巧.html#迭代" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>尽管chatGPT非常强大，但重要的是要记住，它并不总是能在第一次尝试时给予您所希望的确切输出。事实上，chatGPT给予完全出乎意料的响应并不罕见，特别是在遇到更复杂或开放式的提示时。但是，不要将此视为工具的限制。相反，应该将其视为一个使用迭代来细化和改进chatGPT输出的机会，使其从优秀变为卓越。</p>
+<div id="反馈并重试" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> 反馈并重试:<a href="chatgpt-使用技巧.html#反馈并重试" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>反馈chatGPT并让它再试一次是改善其响应的好方法。为此，只需让chatGPT知道：</p>
+<p>1.你喜欢什么
+2.你不喜欢什么
+3.你想看到的</p>
+<p>e.g我真的很欣赏你的语言风格和简洁的段落。不过，我不喜欢你一直重复同样的句子结构。另外，你能为这个话题使用更多相关的隐喻吗？</p>
+</div>
+<div id="ask-for-variations要求变体不同版本" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Ask for Variations要求变体/不同版本:<a href="chatgpt-使用技巧.html#ask-for-variations要求变体不同版本" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>如果 不确定要对输出进行哪些更改，但您知道它接近您所需的效果，请尝试请求更改。您甚至可以进一步详细说明您希望在这些变体中看到的内容。</p>
+<p>e.g “你能给予我三个版本吗？“。你能创造出五种更吸引眼球而又不太花哨的变化吗？“</p>
+</div>
+<div id="ask-for-clarification要求解释" class="section level3 hasAnchor" number="3.1.3">
+<h3><span class="header-section-number">3.1.3</span> Ask for Clarification/要求解释:<a href="chatgpt-使用技巧.html#ask-for-clarification要求解释" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>ChatGPT的给出的结果可能并不总是清晰明了,我们可以问ChatGPT如何解释给出的答案.</p>
+<p>e.g : 你能解释一下这个例子与我的问题有什么关系吗？“</p>
+</div>
+<div id="maintain-stability-in-the-face-of-change部分修改" class="section level3 hasAnchor" number="3.1.4">
+<h3><span class="header-section-number">3.1.4</span> Maintain Stability in the Face of Change/部分修改:<a href="chatgpt-使用技巧.html#maintain-stability-in-the-face-of-change部分修改" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>当你想要编辑chatGPT写的东西时，弄清楚到底需要改变什么是很重要的。否则，chatGPT也可能会更改文本的其他部分。要确保更改发生在想要的位置，请准确地告诉chatGPT在哪里进行更改。</p>
+<p>e.g : “那太好了！试着把第一句写得稍微随意一点，但其余的保持原样。“,“你能提高这篇文章语言的可及性吗？确保不要更改段落的任何内容或结构。“</p>
+</div>
+<div id="添加解释" class="section level3 hasAnchor" number="3.1.5">
+<h3><span class="header-section-number">3.1.5</span> 添加解释:<a href="chatgpt-使用技巧.html#添加解释" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>chatGPT不仅可以创建优秀的内容，还可以为它所创建的内容提供解释。例如，如果要求chatGPT为一个网站编写一些HTML和CSS，该网站的顶部有一个菜单，下面是一个图像网格，下面是一组文本，它将提供一段编写良好的代码。但是，也可以要求chatGPT向代码添加注释，即使是5岁的孩子也能理解。</p>
+<p>e.g : 谢谢你写了那篇HTML。你能给它加上连5岁孩子都能理解的详细评论吗？“,谢谢你改写我的文章。你能在括号里加上一些反馈来解释为什么你做了这些改变吗？“</p>
+</div>
+<div id="longer-shorter-faster-stronger" class="section level3 hasAnchor" number="3.1.6">
+<h3><span class="header-section-number">3.1.6</span> Longer, Shorter, Faster, Stronger:<a href="chatgpt-使用技巧.html#longer-shorter-faster-stronger" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>你可要求ChatGPT 提供更短/更长/更加丰富的内容……</p>
+<p>e.g : “太好了，不过你能不能说得更简洁些？“,你能进一步发展这个想法，使用华丽的语言并提供类比吗？“</p>
+<p>一些简单的例子或者想法</p>
+<ol style="list-style-type: decimal">
+<li>e.g. 我想画一幅骆驼在乡下吃草的画。给我描述一下那幅画, ‘产生5个可以在一年内实施的商业想法’ ‘写一首关于两个老朋友多年来第一次见面的诗’</li>
+<li>为一个企业、网站、书籍或电影想出一个概念，然后让chatGPT为它生成一个品牌名称或标题。您可以使用我们前面讨论过的迭代技术不断改进名称或标题，直到它完美为止。</li>
+<li>e.g. 1.打开你的电子邮件帐户，找到一封你写的比一封信长一点的电子邮件。2.复制整封邮件，粘贴到chatGPT中，然后问“你能为我改进这封邮件吗？”[paste the email here]’3.要求chatGPT对电子邮件进行更改和改进，使用我们刚刚介绍的迭代过程，来回至少4或5次。</li>
+</ol>
+</div>
+</div>
+<div id="角色扮演roleplay" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> 角色扮演(ROLEPLAY)<a href="chatgpt-使用技巧.html#角色扮演roleplay" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>为了最大化利用chatGPT，给的虚拟助手指定一个角色是非常有帮助的。这是因为不同的人会根据他们的技能和专业知识以不同的方式处理任务。</p>
+<p>一旦为chatGPT指定了一个角色，就可以为其指定具体的指令， 除了为chatGPT指定角色外，还可以使用不同的技巧来最大化利用它。例如，要确保问题具有明确的答案，以便chatGPT可以直接回答。如果问题非常开放，它可能需要更多的信息才能回答。此外，还可以尝试使用具体的关键字和短语来帮助chatGPT更好地理解需求。</p>
+<p>最后，要记住，chatGPT是一种人工智能技术，它可以学习和改善。因此，可以通过与它进行交互来提高其效率和准确性。如果发现chatGPT没有回答的问题或提供不准确的答案，请提供反馈，并尝试重新构造问题或提供更多的上下文来帮助它更好地理解您的需求。逐步改进chatGPT的交互将有助于提高它的准确性和效率，并最终更好地实现目标。</p>
+<div id="角色" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> 角色<a href="chatgpt-使用技巧.html#角色" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>一些例子:</p>
+<ol style="list-style-type: decimal">
+<li>(老师角色)当我的西班牙语老师。问我一个问题，等我回答，然后再问我另一个问题。当我有任何错误时，请纠正我并给予我反馈。</li>
+<li>(编辑角色)Act as the Editor of a Newspaper, and I am a journalist. I will give you text and you will give me feedback in bulletpoints about the langauge, grammar, and content. You will not repeat or change my text. Start the conversation by asking me for some text to review</li>
+<li>(作者/写作风格)Act as J. R. R. Tolkien. When I ask you to write some text, use J. R. R. Tolkien’s voice, tone, and writing style. Describe a dark haunted forest on the brim of dest ruction<br />
+</li>
+<li>(扮演一个软件) 充当linux终端。我将编写一个命令，你将输出linux终端的输出。不要解释你在做什么，只是显示一个linux终端会显示的响应。</li>
+<li>(已知书籍、电影或戏剧中的人物) 扮演指环王里的咕噜。用咕噜的声音、语调和习惯说话。在括号内详细描述任何非语言行为或沟通。咕噜，你想要这枚戒指吗？</li>
+</ol>
+</div>
+<div id="制定明确的指示" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> 制定明确的指示<a href="chatgpt-使用技巧.html#制定明确的指示" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>与人工智能进行角色扮演最困难的部分是创建一个提示，使其能够完全承担角色。仅仅告诉人工智能“扮演”某个特定的人或角色，可能会导致人工智能谈论那个人或角色，而不是完全接受它。让我们回顾一下本章中使用的一些提示，看看它们是如何带来沉浸式体验的。</p>
+<p><em>扮演指环王里的格鲁姆。用咕噜的声音、语调和习惯说话。在括号内详细描述任何非语言行为或沟通。咕噜，你想要这枚戒指吗？</em></p>
+<p>创建一个清晰明确的提示是l！〈他们希望通过chatGPT进行身临其境的角色扮演。在这个例子中，我不仅为人工智能提供了一个角色（咕噜），而且还指定了我希望它说话和行动的方式（就像咕噜那样）。我还让chatGPT加入了非语言交流，看看它能在多大程度上捕捉到咕噜的习惯。为了确保人工智能完全沉浸在角色中，我直接向咕噜问了一个问题，开始了谈话</p>
+<p>让我们再看一个例子。</p>
+<p><em>充当linux终端。我将编写o命令，您将输出Linux终端将输出的内容。不要解释你在做什么，只是显示一个linux终端会显示的响应。</em></p>
+<p>在这个场景中，我希望chatGPT成为一个Linux终端，而不仅仅是向我解释它是什么。为了实现这一点，我通过描述我将做什么（编写命令）和Al将如何响应（输出Linux终端将输出的内容）来具体说明我的提示符。</p>
+</div>
+</div>
+<div id="训练chatgpt" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> 训练ChatGPT<a href="chatgpt-使用技巧.html#训练chatgpt" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>在ChatGPT中. “zero shot”Prompt指的是AI模型在没有任何示例或上下文的情况下生成一些东西。 例如，要求chatGPT“写一首关于爱情的诗”是一个“zero shot Prompt”，因为在生成输出时没有为chatGPT提供可参考的示例。</p>
+<p>“multiple shot”Prompt是指向Al bot提供多个示例以用作参考。例如，如果为chatGPT提供了三首不同的爱情诗，然后要求它“写一首关于爱情的诗”，如果提供了多个示例，chatGPT就能够比较和对比诗歌，找到一种模式，将所有示例重新分组到同一类别中。</p>
+<p>ChatGPT不需要示例就能给予想要的输出，这要归功于其庞大的训练数据集。但是如果你想让chatGPT复制你的写作风格，则你就需要“multiple shot”Prompt.</p>
+<p>你们可以提供一些内容, 然后让Chatgpt 学习,然后根据学习结果进一步来进行创作.</p>
+</div>
+<div id="创建长内容" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> 创建长内容<a href="chatgpt-使用技巧.html#创建长内容" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>直接使用Chatgpt 创建非常长的内容是不合适的, 一个好的方法是将较大的内容分解为较小的部分，然后使用chatGPT单独处理每个部分。</p>
+</div>
+<div id="案例" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> 案例<a href="chatgpt-使用技巧.html#案例" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>一下这个链接提供了案例: <a href="https://platform.openai.com/examples" class="uri">https://platform.openai.com/examples</a></p>
+<p>这里还会列举出一些使用案例</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="chatgpt-功能.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="创建有效的prompt.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-cross-refs.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
